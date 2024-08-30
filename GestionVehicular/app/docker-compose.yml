@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_DB: gestion_vehiculo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Am@.0034
+    ports:
+      - "5432:5432"
+
+
+
+  msvc-propietarios:
+    build:
+      context: msvc-propietarios
+      dockerfile: Dockerfile
+    container_name: msvc-propietarios
+    ports:
+      - "8001:8001"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/gestion_vehiculo
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: Am@.0034
+
+
+  msvc-vehiculos:
+    build:
+      context: msvc-vehiculos
+      dockerfile: Dockerfile
+    container_name: msvc-vehiculos
+    ports:
+      - "8002:8002"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/gestion_vehiculo
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: Am@.0034

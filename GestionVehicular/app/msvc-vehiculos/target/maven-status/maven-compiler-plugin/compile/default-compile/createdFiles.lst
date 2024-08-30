@@ -1,0 +1,9 @@
+com\espe\msvc\vehiculos\services\VehiculoServiceImpl.class
+com\espe\msvc\vehiculos\controllers\VehiculoController.class
+com\espe\msvc\vehiculos\models\entity\Propietario.class
+com\espe\msvc\vehiculos\models\entity\Vehiculo.class
+com\espe\msvc\vehiculos\MsvcVehiculosApplication.class
+com\espe\msvc\vehiculos\repositories\VehiculoRepository.class
+com\espe\msvc\vehiculos\models\entity\VehiculoPropietario.class
+com\espe\msvc\vehiculos\clients\PropietarioClientRest.class
+com\espe\msvc\vehiculos\services\VehiculoService.class

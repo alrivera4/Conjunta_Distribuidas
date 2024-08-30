@@ -1,0 +1,6 @@
+com\espe\msvc\propietarios\services\PropietarioService.class
+com\espe\msvc\propietarios\controllers\PropietarioController.class
+com\espe\msvc\propietarios\repositories\PropietarioRepository.class
+com\espe\msvc\propietarios\services\PropietarioServiceImpl.class
+com\espe\msvc\propietarios\MsvcPropietariosApplication.class
+com\espe\msvc\propietarios\models\entity\Propietario.class
